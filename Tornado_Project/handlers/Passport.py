@@ -62,7 +62,7 @@ class LoginHandler(BaseHandler):
 		res = self.db.get("select up_user_id, up_name, up_passwd from ih_user_profile where up_mobile=%(mobile)s", mobile=mobile)
 		password = hashlib.sha256(config.passwd_hash_key + password).hexdigest()
 
-		if res and res["up_passwd"] = unicode(password):
+		if res and res["up_passwd"] == unicode(password):
 			try:
 				self.session = Session(self)
 				self.session.data["user_id"] = res["up_user_id"]

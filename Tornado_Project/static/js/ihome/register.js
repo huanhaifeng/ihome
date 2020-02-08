@@ -20,7 +20,7 @@ function generateUUID() {
 
 function generateImageCode() {
     var picId = generateUUID();
-    $(".image-code img").attr("src", "/api/piccode?pre="+imageCodeId+"&cur="+picId);
+    $(".image-code img").attr("src", "/api/imagecode?codeid="+imageCodeId+"&pcodeid="+picId);
     imageCodeId = picId;
 }
 
