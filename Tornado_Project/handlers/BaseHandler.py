@@ -23,7 +23,7 @@ class BaseHandler(RequestHandler):
 		if self.request.headers.get("Content-Type", "").startswith("application/json"):
 			self.json_args = json.loads(self.request.body)
 		else:
-			self.json_args = None
+			self.json_args = {}
 
 	def write_error(self, status_code, **kwargs):
 		pass
