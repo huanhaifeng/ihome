@@ -15,5 +15,6 @@ handlers = [
 	(r'^/api/house/area$', house.AreaInfoHandler),
 	(r'^/api/house/my$', house.MyHouseHandler),
 	(r'^/api/house/info$', house.HouseInfoHandler),
+	(r'^/api/house/list$', house.HouseListHandler),
 	(r'/(.*)', StaticFileHandler, dict(path=os.path.join(os.path.dirname(__file__), "html"), default_filename="index.html"))
 ]

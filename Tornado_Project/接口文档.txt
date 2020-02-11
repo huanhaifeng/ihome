@@ -70,3 +70,36 @@
 	 	"errmsg": ""
 	 }
 
+	4.房屋列表
+	 URL: /api/house/list
+
+	 method: get
+
+	 传入参数：
+	 名称							类型						说明											是否必须	 
+	 start_date				string																否
+	 end_date					string																否
+	 area_id					string																否
+	 sort_key					string				默认时间倒序								否
+	 page							int						默认第一页								否
+
+	 返回值：
+	 {
+			"errno": 0,
+			"errmsg": "OK",
+			"houses": [
+					{
+						"houses_id": 123,
+						"houses_title": "",
+						"price": 12000,
+						"address": "地理位置"
+						"room_count": "出租间数",
+						"order_count": "入住次数",
+						"user_avatar": "用户头像",
+						"house_img_url"： "房屋图片"
+					},
+			],
+			"total_page"：总共页面数
+	 }
+
+
